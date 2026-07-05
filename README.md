@@ -27,27 +27,24 @@ chef-ai-recipe-generator/
 ├── sample_ingredients.txt  # Quick-test ingredient file
 ├── requirements.txt        # Project dependencies
 └── README.md               # Project documentation
+
 🚀 How to Install
 Clone the repository and install the required dependencies:
-
-Bash
 pip install -r requirements.txt
+
 ▶️ How to Run
 Launch the Streamlit server from your terminal:
-
-Bash
 streamlit run app.py
+
 Once running, open your browser and navigate to http://localhost:8501
 
 🥘 Sample Input
 You can type the following plain text into the app:
-
-Plaintext
 tomato, onion, pasta, garlic, olive oil
+
 Alternatively, upload the provided sample_ingredients.txt file using the built-in file uploader.
 
 🏗️ Architecture
-Plaintext
 Streamlit UI (app.py)
        │
        ▼
@@ -57,6 +54,8 @@ Streamlit UI (app.py)
        ├─► ingredient_parser.py – Parse & normalise
        ├─► recipe_generator.py  – Rule-based recipe logic
        └─► narrator.py          – Add fun personality & emojis
+
+
 Each module is written as a clean Python file with short, focused functions. No classes, no external APIs, and no databases—just simple, readable Python code.
 
 📝 Notes
@@ -66,11 +65,8 @@ File Formats: Strictly accepts .txt and .json files.
 
 JSON Structure: JSON files must be structured either as a flat list:
 
-JSON
 ["tomato", "onion"]
 Or as an object containing an "ingredients" key:
-
-JSON
 {
   "ingredients": ["tomato", "onion"]
 }
