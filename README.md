@@ -28,6 +28,7 @@ chef-ai-recipe-generator/
 ├── requirements.txt        # Project dependencies
 └── README.md               # Project documentation
 
+```text
 🚀 How to Install
 Clone the repository and install the required dependencies:
 pip install -r requirements.txt
@@ -70,3 +71,10 @@ Or as an object containing an "ingredients" key:
 {
   "ingredients": ["tomato", "onion"]
 }
+
+⚙️ Core Technical Constraints
+Payload Threshold: Evaluates a maximum threshold of 30 individual ingredients per transaction window to guarantee interface rendering speeds.
+
+Extension Constraints: Rejects any input vectors falling outside explicit .txt or .json MIME boundaries.
+
+Functional Purity: Built entirely without object-oriented state side effects or external networking requirements.
