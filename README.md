@@ -29,23 +29,28 @@ chef-ai-recipe-generator/
 └── README.md               # Project documentation
 
 ```
-🚀 How to Install
+## 🚀 How to Install
+
 Clone the repository and install the required dependencies:
 pip install -r requirements.txt
 
-▶️ How to Run
+## ▶️ How to Run
+
 Launch the Streamlit server from your terminal:
 streamlit run app.py
 
 Once running, open your browser and navigate to http://localhost:8501
 
-🥘 Sample Input
+## 🥘 Sample Input
+
 You can type the following plain text into the app:
 tomato, onion, pasta, garlic, olive oil
 
+
 Alternatively, upload the provided sample_ingredients.txt file using the built-in file uploader.
 
-🏗️ Architecture
+## 🏗️ Architecture
+
 Streamlit UI (app.py)
        │
        ▼
@@ -59,7 +64,8 @@ Streamlit UI (app.py)
 
 Each module is written as a clean Python file with short, focused functions. No classes, no external APIs, and no databases—just simple, readable Python code.
 
-📝 Notes
+## 📝 Notes
+
 Limits: Maximum of 30 ingredients supported per single request.
 
 File Formats: Strictly accepts .txt and .json files.
@@ -72,7 +78,8 @@ Or as an object containing an "ingredients" key:
   "ingredients": ["tomato", "onion"]
 }
 
-⚙️ Core Technical Constraints
+## ⚙️ Core Technical Constraints
+
 Payload Threshold: Evaluates a maximum threshold of 30 individual ingredients per transaction window to guarantee interface rendering speeds.
 
 Extension Constraints: Rejects any input vectors falling outside explicit .txt or .json MIME boundaries.
