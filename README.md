@@ -28,7 +28,7 @@ chef-ai-recipe-generator/
 ├── requirements.txt        # Project dependencies
 └── README.md               # Project documentation
 
-```text
+```
 🚀 How to Install
 Clone the repository and install the required dependencies:
 pip install -r requirements.txt
