@@ -18,7 +18,7 @@ def sanitize_text(text: str) -> str:
     # Strip HTML tags
     text = re.sub(r"<[^>]+>", "", text)
     # Remove script/style block content
-    text = re.sub(r"(?i)(script|style|onerror|onclick|javascript)\s*[:=]?[^\n]*", "", text)
+    text = re.sub(r"(?i)\b(script|style|onerror|onclick|javascript)\b\s*[:=]?[^\n]*", "", text)
     return text.strip()
 
 

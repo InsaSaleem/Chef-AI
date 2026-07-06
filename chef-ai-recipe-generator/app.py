@@ -228,24 +228,22 @@ if generate_btn:
         for idx, step in enumerate(result["steps"], 1)
     )
 
-    card_html = f"""
-    <div class="recipe-card">
-        <div class="recipe-title">{result["display_title"]}</div>
-        <div class="recipe-note">✨ {result["note"]}</div>
+    card_html = f"""<div class="recipe-card">
+<div class="recipe-title">{result["display_title"]}</div>
+<div class="recipe-note">✨ {result["note"]}</div>
 
-        <div class="section-label">🛒 Ingredients</div>
-        <div>{ingredients_html}</div>
+<div class="section-label">🛒 Ingredients</div>
+<div>{ingredients_html}</div>
 
-        <div class="section-label">📋 Steps</div>
-        {steps_html}
+<div class="section-label">📋 Steps</div>
+{steps_html}
 
-        <div class="section-label">🍽️ Servings</div>
-        <p>Serves {result["servings"]} people</p>
+<div class="section-label">🍽️ Servings</div>
+<p>Serves {result["servings"]} people</p>
 
-        <div class="section-label">🏷️ Tags</div>
-        <div>{tags_html}</div>
-    </div>
-    """
+<div class="section-label">🏷️ Tags</div>
+<div>{tags_html}</div>
+</div>"""
 
     st.markdown(card_html, unsafe_allow_html=True)
     st.success("Recipe ready! Enjoy your meal 🥳")

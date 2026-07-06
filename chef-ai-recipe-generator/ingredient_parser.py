@@ -17,6 +17,16 @@ PLURAL_MAP = {
     "mushrooms": "mushroom",
     "beans": "bean",
     "peas": "pea",
+    "noodles": "noodle",
+    "chunks": "chunk",
+    "chops": "chop",
+    "spices": "spice",
+    "herbs": "herb",
+    "chillies": "chilli",
+    "chilies": "chili",
+    "eggs": "egg",
+    "olives": "olive",
+    "shrimps": "shrimp",
 }
 
 

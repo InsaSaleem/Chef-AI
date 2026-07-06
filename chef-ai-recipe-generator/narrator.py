@@ -61,12 +61,16 @@ def _pick_emoji(title: str) -> str:
 
 
 def _emoji_for_step(step: str) -> str:
-    """Find the first matching action emoji for a step string."""
+    """Find the earliest-occurring matching action emoji for a step string."""
     lower = step.lower()
+    best_pos = None
+    best_emoji = "👨‍🍳"
     for keyword, emoji in STEP_EMOJIS.items():
-        if keyword in lower:
-            return emoji
-    return "👨‍🍳"
+        pos = lower.find(keyword)
+        if pos != -1 and (best_pos is None or pos < best_pos):
+            best_pos = pos
+            best_emoji = emoji
+    return best_emoji
 
 
 def _add_step_emojis(steps: list) -> list:
