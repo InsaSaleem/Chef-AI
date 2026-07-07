@@ -17,6 +17,34 @@ st.set_page_config(
 )
 
 # ──────────────────────────────────────────────
+# Black background + food-photography backdrop
+# (visual only – no functionality changed below)
+# ──────────────────────────────────────────────
+BACKGROUND_IMAGE_URL = "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=2200&q=80"
+
+st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-color: #000000;
+        background-image:
+            linear-gradient(180deg, rgba(0,0,0,0.90) 0%, rgba(0,0,0,0.80) 45%, rgba(0,0,0,0.92) 100%),
+            url("{BACKGROUND_IMAGE_URL}");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }}
+    /* Keep the plain st.markdown header/subtitle readable on the new black background */
+    .stMarkdown h2, .stMarkdown h3, .stMarkdown p, .stMarkdown em {{
+        color: #e8e8f0;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+# ──────────────────────────────────────────────
 # Floating food emoji animation (HTML/CSS)
 # ──────────────────────────────────────────────
 FLOATING_EMOJIS_HTML = """
