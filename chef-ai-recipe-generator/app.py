@@ -25,6 +25,16 @@ BACKGROUND_IMAGE_URL = "https://images.unsplash.com/photo-1490645935967-10de6ba1
 st.markdown(
     f"""
     <style>
+    /* 1. This targets and fixes the top header bar color */
+    header[data-testid="stHeader"] {{
+        background-color: #000000 !important;
+    }}
+    /* This ensures your header icons/text remain visible */
+    header[data-testid="stHeader"] * {{
+        color: #e8e8f0 !important;
+    }}
+    
+    /* 2. Your original styling stays exactly the same below */
     .stApp {{
         background-color: #000000;
         background-image:
